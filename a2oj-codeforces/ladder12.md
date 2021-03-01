@@ -1,6 +1,6 @@
-##A2OJ Ladder-12 Solutions
+## A2OJ Ladder-12 Solutions
 
-###[Arrival of the General](https://codeforces.com/problemset/problem/144/A)
+### [Arrival of the General](https://codeforces.com/problemset/problem/144/A)
 ```python
 n = int(input())
 heights = list(map(int, input().split()))
@@ -13,7 +13,7 @@ if min_index < max_index:
 print(time)
 ```
 
-###[Beautiful Matrix](https://codeforces.com/problemset/problem/263/A)
+### [Beautiful Matrix](https://codeforces.com/problemset/problem/263/A)
 ```python
 x, y = -1, -1
 for i in range(1, 6):
@@ -25,14 +25,14 @@ for i in range(1, 6):
 print(abs(3-x) + abs(3-y))
 ```
 
-###[Ultra-Fast Mathematician](https://codeforces.com/problemset/problem/61/A)
+### [Ultra-Fast Mathematician](https://codeforces.com/problemset/problem/61/A)
 ```python
 x = input()
 y = input()
 print(''.join([str(int(a) ^ int(b)) for a, b in zip(x, y)]))
 ```
 
-###[Blackjack](https://codeforces.com/problemset/problem/104/A)
+### [Blackjack](https://codeforces.com/problemset/problem/104/A)
 ```python
 n = int(input())
 

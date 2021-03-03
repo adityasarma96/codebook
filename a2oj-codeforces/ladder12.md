@@ -44,13 +44,13 @@ else:
     print(0)
 ```
 
-###[HQ9+](https://codeforces.com/problemset/problem/133/A)
+### [HQ9+](https://codeforces.com/problemset/problem/133/A)
 ```python
 p = input()
 print("YES") if 'H' in p or 'Q' in p or '9' in p else print("NO")
 ```
 
-###[I_love_%username%](https://codeforces.com/problemset/problem/155/A)
+### [I_love_%username%](https://codeforces.com/problemset/problem/155/A)
 ```python
 n = int(input())
 scores = list(map(int, input().split()))
@@ -67,7 +67,7 @@ for i in scores:
 print(count)
 ```
 
-###[Petya and Strings](https://codeforces.com/problemset/problem/112/A)
+### [Petya and Strings](https://codeforces.com/problemset/problem/112/A)
 ```python
 a = input().lower()
 b = input().lower()
@@ -78,4 +78,27 @@ elif a > b:
     print("1")
 else:
     print("0")
+```
+
+### [Cookies](https://codeforces.com/problemset/problem/129/A)
+```python
+n = int(input())
+bags = list(map(int, input().split()))
+total_sum = sum(bags)
+count = 0
+for i in bags:
+    if ((total_sum - i)&1) == 0:
+        count += 1
+print(count)
+```
+
+### [Candy Bags](https://codeforces.com/problemset/problem/334/A)
+```python
+n = int(input())
+starting = 1
+ending = n * n
+for _ in range(n):
+    print(*[starting + i if i < n // 2 else ending + i - n + 1for i in range(n)])
+    starting += n // 2
+    ending -= n // 2
 ```

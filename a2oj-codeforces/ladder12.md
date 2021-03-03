@@ -43,3 +43,39 @@ elif 1 <= n - 10 <= 9 or n - 10 == 11:
 else:
     print(0)
 ```
+
+###[HQ9+](https://codeforces.com/problemset/problem/133/A)
+```python
+p = input()
+print("YES") if 'H' in p or 'Q' in p or '9' in p else print("NO")
+```
+
+###[I_love_%username%](https://codeforces.com/problemset/problem/155/A)
+```python
+n = int(input())
+scores = list(map(int, input().split()))
+count = 0
+maxi = mini = scores[0]
+
+for i in scores:
+    if i > maxi:
+        maxi = i
+        count += 1
+    if i < mini:
+        mini = i
+        count += 1
+print(count)
+```
+
+###[Petya and Strings](https://codeforces.com/problemset/problem/112/A)
+```python
+a = input().lower()
+b = input().lower()
+
+if a<b:
+    print("-1")
+elif a > b:
+    print("1")
+else:
+    print("0")
+```

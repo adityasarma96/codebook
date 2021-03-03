@@ -102,3 +102,18 @@ for _ in range(n):
     starting += n // 2
     ending -= n // 2
 ```
+
+### [Drinks](https://codeforces.com/problemset/problem/200/B)
+```python
+n = int(input())
+oj_percent = list(map(int,input().split()))
+print(sum(oj_percent)/n)
+```
+
+### [Vasily the Bear and Triangle](https://codeforces.com/problemset/problem/336/A)
+```python
+x, y = map(int, input().split())
+m = 1 if x*y < 0 else -1
+c = y - m * x
+print(-1 * c // m, 0, 0, c) if -1 * c // m < 0 else print(0, c, -1 * c // m, 0)
+```

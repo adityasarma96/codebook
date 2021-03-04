@@ -55,9 +55,10 @@ print("YES") if 'H' in p or 'Q' in p or '9' in p else print("NO")
 n = int(input())
 scores = list(map(int, input().split()))
 count = 0
-maxi = mini = scores[0]
+mini, *rest = scores
+maxi = mini
 
-for i in scores:
+for i in rest:
     if i > maxi:
         maxi = i
         count += 1
@@ -116,4 +117,34 @@ x, y = map(int, input().split())
 m = 1 if x*y < 0 else -1
 c = y - m * x
 print(-1 * c // m, 0, 0, c) if -1 * c // m < 0 else print(0, c, -1 * c // m, 0)
+```
+
+### [Lunch Rush](https://codeforces.com/problemset/problem/276/A)
+```python
+def joy(f, t, k): return f - t + k if t > k else f
+
+
+n, x = map(int, input().split())
+max_joy = joy(*(map(int, input().split())), x)
+for i in range(1, n):
+    max_joy = max(joy(*(map(int, input().split())), x), max_joy)
+print(max_joy)
+```
+
+### [Cakeminator](https://codeforces.com/problemset/problem/330/A)
+```python
+r,c = map(int, input().split())
+count = 0
+grid = []
+for _ in range(r):
+    row = input()
+    if 'S' not in row:
+        count += c
+    else:
+        grid.append(list(row))
+
+for t in zip(* grid):
+    if 'S' not in t:
+        count += len(t)
+print(count)
 ```

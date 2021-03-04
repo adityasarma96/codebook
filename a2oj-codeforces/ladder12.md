@@ -1,6 +1,6 @@
 ## A2OJ Ladder-12 Solutions
 
-### [Arrival of the General](https://codeforces.com/problemset/problem/144/A)
+### [1. Arrival of the General](https://codeforces.com/problemset/problem/144/A)
 ```python
 n = int(input())
 heights = list(map(int, input().split()))
@@ -13,7 +13,7 @@ if min_index < max_index:
 print(time)
 ```
 
-### [Beautiful Matrix](https://codeforces.com/problemset/problem/263/A)
+### [2. Beautiful Matrix](https://codeforces.com/problemset/problem/263/A)
 ```python
 x, y = -1, -1
 for i in range(1, 6):
@@ -25,14 +25,14 @@ for i in range(1, 6):
 print(abs(3-x) + abs(3-y))
 ```
 
-### [Ultra-Fast Mathematician](https://codeforces.com/problemset/problem/61/A)
+### [3. Ultra-Fast Mathematician](https://codeforces.com/problemset/problem/61/A)
 ```python
 x = input()
 y = input()
 print(''.join([str(int(a) ^ int(b)) for a, b in zip(x, y)]))
 ```
 
-### [Blackjack](https://codeforces.com/problemset/problem/104/A)
+### [4.Blackjack](https://codeforces.com/problemset/problem/104/A)
 ```python
 n = int(input())
 
@@ -44,13 +44,13 @@ else:
     print(0)
 ```
 
-### [HQ9+](https://codeforces.com/problemset/problem/133/A)
+### [5. HQ9+](https://codeforces.com/problemset/problem/133/A)
 ```python
 p = input()
 print("YES") if 'H' in p or 'Q' in p or '9' in p else print("NO")
 ```
 
-### [I_love_%username%](https://codeforces.com/problemset/problem/155/A)
+### [6. I_love_%username%](https://codeforces.com/problemset/problem/155/A)
 ```python
 n = int(input())
 scores = list(map(int, input().split()))
@@ -68,7 +68,7 @@ for i in rest:
 print(count)
 ```
 
-### [Petya and Strings](https://codeforces.com/problemset/problem/112/A)
+### [7. Petya and Strings](https://codeforces.com/problemset/problem/112/A)
 ```python
 a = input().lower()
 b = input().lower()
@@ -81,7 +81,7 @@ else:
     print("0")
 ```
 
-### [Cookies](https://codeforces.com/problemset/problem/129/A)
+### [8. Cookies](https://codeforces.com/problemset/problem/129/A)
 ```python
 n = int(input())
 bags = list(map(int, input().split()))
@@ -93,7 +93,7 @@ for i in bags:
 print(count)
 ```
 
-### [Candy Bags](https://codeforces.com/problemset/problem/334/A)
+### [9. Candy Bags](https://codeforces.com/problemset/problem/334/A)
 ```python
 n = int(input())
 starting = 1
@@ -104,14 +104,14 @@ for _ in range(n):
     ending -= n // 2
 ```
 
-### [Drinks](https://codeforces.com/problemset/problem/200/B)
+### [10. Drinks](https://codeforces.com/problemset/problem/200/B)
 ```python
 n = int(input())
 oj_percent = list(map(int,input().split()))
 print(sum(oj_percent)/n)
 ```
 
-### [Vasily the Bear and Triangle](https://codeforces.com/problemset/problem/336/A)
+### [11. Vasily the Bear and Triangle](https://codeforces.com/problemset/problem/336/A)
 ```python
 x, y = map(int, input().split())
 m = 1 if x*y < 0 else -1
@@ -119,7 +119,7 @@ c = y - m * x
 print(-1 * c // m, 0, 0, c) if -1 * c // m < 0 else print(0, c, -1 * c // m, 0)
 ```
 
-### [Lunch Rush](https://codeforces.com/problemset/problem/276/A)
+### [12. Lunch Rush](https://codeforces.com/problemset/problem/276/A)
 ```python
 def joy(f, t, k): return f - t + k if t > k else f
 
@@ -131,7 +131,7 @@ for i in range(1, n):
 print(max_joy)
 ```
 
-### [Cakeminator](https://codeforces.com/problemset/problem/330/A)
+### [13. Cakeminator](https://codeforces.com/problemset/problem/330/A)
 ```python
 r,c = map(int, input().split())
 count = 0
@@ -148,7 +148,7 @@ for t in zip(* grid):
         count += len(t)
 print(count)
 ```
-### [Stones on the Table](https://codeforces.com/problemset/problem/266/A)
+### [14. Stones on the Table](https://codeforces.com/problemset/problem/266/A)
 ```python
 int(input())
 colours = input()
@@ -159,7 +159,7 @@ for i, val in enumerate(colours[:-1]):
 print(count)
 ```
 
-### [Bit++](https://codeforces.com/problemset/problem/282/A)
+### [15. Bit++](https://codeforces.com/problemset/problem/282/A)
 ```python
 n = int(input())
 count = 0
@@ -171,7 +171,7 @@ for i in range(n):
 print(count)
 ```
 
-### [Levko and Table](https://codeforces.com/problemset/problem/361/A)
+### [16. Levko and Table](https://codeforces.com/problemset/problem/361/A)
 ```python
 n,k = map(int,input().split())
 
@@ -181,7 +181,7 @@ for i in range(n):
     print(*row)
     row[i] = 0
 ```
-### [Young Physicist](http://codeforces.com/problemset/problem/69/A)
+### [17. Young Physicist](http://codeforces.com/problemset/problem/69/A)
 ```python
 n = int(input())
 cx = cy = cz = 0
@@ -195,7 +195,7 @@ if cx ==0 and cy ==0 and cz ==0:
 else:
     print("NO")
 ```
-### [Chips](https://codeforces.com/problemset/problem/92/A)
+### [18. Chips](https://codeforces.com/problemset/problem/92/A)
 ```python
 n, m = map(int, input().split())
 
@@ -208,7 +208,7 @@ while True:
         break
     index = index % n + 1
 ```
-### [Tram](https://codeforces.com/problemset/problem/116/A)
+### [19. Tram](https://codeforces.com/problemset/problem/116/A)
 ```python
 max_capacity = capacity = 0
 for _ in range(int(input())):
@@ -217,7 +217,7 @@ for _ in range(int(input())):
     max_capacity = max(max_capacity,capacity)
 print(max_capacity)
 ```
-### [Queue at the School](https://codeforces.com/problemset/problem/266/B)
+### [20. Queue at the School](https://codeforces.com/problemset/problem/266/B)
 ```python
 n, t = map(int, input().split())
 seq = list(input())
@@ -228,7 +228,7 @@ for _ in range(t):
 print(''.join(seq))
 ```
 
-### [Way Too Long Words](https://codeforces.com/problemset/problem/71/A)
+### [21. Way Too Long Words](https://codeforces.com/problemset/problem/71/A)
 ```python
 for _ in range(int(input())):
     s = input()

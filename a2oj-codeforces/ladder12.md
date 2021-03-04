@@ -148,3 +148,92 @@ for t in zip(* grid):
         count += len(t)
 print(count)
 ```
+### [Stones on the Table](https://codeforces.com/problemset/problem/266/A)
+```python
+int(input())
+colours = input()
+count = 0
+for i, val in enumerate(colours[:-1]):
+    if val == colours[i + 1]:
+        count += 1
+print(count)
+```
+
+### [Bit++](https://codeforces.com/problemset/problem/282/A)
+```python
+n = int(input())
+count = 0
+for i in range(n):
+    if '+' == input()[1]:
+        count += 1
+    else:
+        count -= 1
+print(count)
+```
+
+### [Levko and Table](https://codeforces.com/problemset/problem/361/A)
+```python
+n,k = map(int,input().split())
+
+row = [0]*n
+for i in range(n):
+    row[i] = k
+    print(*row)
+    row[i] = 0
+```
+### [Young Physicist](http://codeforces.com/problemset/problem/69/A)
+```python
+n = int(input())
+cx = cy = cz = 0
+for _ in range(n):
+    x, y, z = map(int, input().split())
+    cx += x
+    cy += y
+    cz += z
+if cx ==0 and cy ==0 and cz ==0:
+    print("YES")
+else:
+    print("NO")
+```
+### [Chips](https://codeforces.com/problemset/problem/92/A)
+```python
+n, m = map(int, input().split())
+
+index = 1
+while True:
+    if m >= index:
+        m -= index
+    else:
+        print(m)
+        break
+    index = index % n + 1
+```
+### [Tram](https://codeforces.com/problemset/problem/116/A)
+```python
+max_capacity = capacity = 0
+for _ in range(int(input())):
+    exit, enter = map(int,input().split())
+    capacity += enter - exit
+    max_capacity = max(max_capacity,capacity)
+print(max_capacity)
+```
+### [Queue at the School](https://codeforces.com/problemset/problem/266/B)
+```python
+n, t = map(int, input().split())
+seq = list(input())
+for _ in range(t):
+    for i, ch in enumerate(seq[:-1]):
+        if ch == 'B' and seq[i+1] == 'G':
+            seq[i], seq[i+1] = seq[i+1], seq[i]
+print(''.join(seq))
+```
+
+### [Way Too Long Words](https://codeforces.com/problemset/problem/71/A)
+```python
+for _ in range(int(input())):
+    s = input()
+    if len(s) > 10:
+        print(''.join([s[0], str(len(s)-2), s[-1]]))
+    else:
+        print(s)
+```

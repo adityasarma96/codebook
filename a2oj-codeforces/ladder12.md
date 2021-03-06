@@ -237,3 +237,67 @@ for _ in range(int(input())):
     else:
         print(s)
 ```
+
+### [22.Present from Lena]()
+```python
+def get_number_row(i): return [x if x <= i else 2 * i - x for x in range(2 * i + 1)]
+
+
+def get_spaces(i, n): return [' '] * (n - i)
+
+
+n = int(input())
+for i in range(n + 1):
+    print(*([' '] * (n - i)), *get_number_row(i))
+for i in reversed(range(n)):
+    print(*([' '] * (n - i)), *get_number_row(i))
+
+```
+
+### [23. Jeff and Digits]()
+```python
+n = int(input())
+digits = list(map(int, input().split()))
+five_count = sum(digits) // 5
+zero_count = n - five_count
+maxi = -1
+
+if zero_count > 0:
+    s = '0'
+    maxi = 0
+    zero_count -= 1
+    for _ in range(five_count):
+        s = '5' + s
+        if int(s) % 90 == 0:
+            maxi = max(maxi, int(s))
+    if maxi > 0 and zero_count > 0:
+        maxi = str(maxi) + '0' * zero_count
+print(maxi)
+```
+
+### [24. Slightly Decreasing Permutations](https://codeforces.com/problemset/problem/285/A)
+```python
+n, k = map(int,input().split())
+row = []
+for _ in range(k):
+    row.append(n)
+    n -=1
+for i in range(1,n+1):
+    row.append(i)
+print(*row)
+```
+
+### [25.](https://codeforces.com/problemset/problem/34/B)
+```python
+n, m = map(int, input().split())
+prices = list(map(int, input().split()))
+prices.sort()
+
+count = 0
+for i, val in enumerate(prices):
+    if i >= m or val >= 0:
+        break
+    else:
+        count -= val
+print(count)
+```

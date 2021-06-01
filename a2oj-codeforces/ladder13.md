@@ -1,5 +1,26 @@
 ## A2OJ Ladder-13 Solutions
 
+### [1. Choosing Teams](https://codeforces.com/problemset/problem/432/A)
+
+```java
+static class Solver {
+    public void solve(int testCase, InputReader in) {
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            int t = in.nextInt();
+            if (t + k <= 5) {
+                count++;
+            }
+        }
+        System.out.println(count / 3);
+    }
+}
+```
+
+# Reset Below
+
 ### [1. Young Physicist](https://codeforces.com/problemset/problem/69/A)
 
 ```java

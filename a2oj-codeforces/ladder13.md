@@ -19,7 +19,7 @@ static class Solver {
 }
 ```
 
-# Reset Below
+### #Update Below - TBD
 
 ### [1. Young Physicist](https://codeforces.com/problemset/problem/69/A)
 
